@@ -1,11 +1,12 @@
 # 🛵 Behavioral Digital Twin of an Electric Two-Wheeler (E-Scooter)
-
+<!--
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Framework-TensorFlow_2.x-orange](https://img.shields.io/badge/Framework-TensorFlow%202.x-orange.svg)](https://www.tensorflow.org/)
 [![XGBoost](https://img.shields.io/badge/Model-XGBoost-green.svg)](https://xgboost.readthedocs.io/)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red.svg)](https://streamlit.io/)
 [![Unity 3D](https://img.shields.io/badge/Digital%20Shadow-Unity%20%2B%20Cesium-black.svg)](https://unity.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+-->
 
 A closed-loop, data-driven **Behavioral Digital Twin (DT)** and **3D Geospatial Digital Shadow** for an electric two-wheeler (e-scooter). 
 
