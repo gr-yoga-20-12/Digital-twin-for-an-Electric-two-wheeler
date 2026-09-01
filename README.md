@@ -132,18 +132,19 @@ The virtual representation is built in Unity 3D integrated with **Cesium for Uni
 ```text
 ├── .gitignore                      # Git rules (excludes large datasets >100MB & Unity cache)
 ├── requirements.txt                # Python package dependencies
-├── Hardware_Architecture.drawio    # System hardware & software architecture diagram
-├── sensor_broker.py                # 10 Hz central simulation broker & TCP telemetry publisher
-├── validate_digital_twin.py        # 500-step closed-loop feedback validation suite
-├── confirm_drift.py                # Multi-trip error accumulation & drift analysis
-├── eda_escooter_dt.py              # Exploratory data analysis for both datasets
-│
-├── preprocess_paderborn.py         # Physics-informed preprocessing for Paderborn PMSM
-├── preprocess_bmw_i3.py            # Physics-informed preprocessing for BMW i3 cycles
-├── model_controller.py             # Train XGBoost Motor Controller
-├── model_motor.py                  # Train 2-Layer LSTM Motor Dynamics Model
-├── model_dynamics_lstm.py          # Train 2-Layer LSTM Vehicle Dynamics Model
-├── model_range_lstm.py             # Train Dual-Target LSTM Range Model
+├──Codes/
+|  ├──Core/
+|    ── sensor_broker.py                # 10 Hz central simulation broker & TCP telemetry publisher
+|    ── validate_digital_twin.py        # 500-step closed-loop feedback validation suite
+|    ── confirm_drift.py                # Multi-trip error accumulation & drift analysis
+|    ── eda_escooter_dt.py              # Exploratory data analysis for both datasets
+|  ├──Pipeline/
+|    ── preprocess_paderborn.py         # Physics-informed preprocessing for Paderborn PMSM
+|    ── preprocess_bmw_i3.py            # Physics-informed preprocessing for BMW i3 cycles
+|    ── model_controller.py             # Train XGBoost Motor Controller
+|    ── model_motor.py                  # Train 2-Layer LSTM Motor Dynamics Model
+|    ── model_dynamics_lstm.py          # Train 2-Layer LSTM Vehicle Dynamics Model
+|    ── model_range_lstm.py             # Train Dual-Target LSTM Range Model
 │
 ├── dashboard/                      # Interactive Streamlit Telemetry Dashboard
 │   ├── app.py                      # Main dashboard application
@@ -152,20 +153,22 @@ The virtual representation is built in Unity 3D integrated with **Cesium for Uni
 │   ├── state.py                    # Rolling history buffer manager
 │   └── styles.py                   # Custom dark glassmorphism CSS theme
 │
-├── Ride_data_generation/           # Synthetic Scenario Generators & Test CSVs
+├── Scenarios/           # Synthetic Scenario Generators & Test CSVs
 │   ├── generate_aggressive_rider.py
 │   ├── generate_highway_cruise.py
 │   ├── generate_hill_climb.py
 │   ├── generate_urban_commute.py
 │   ├── generate_winter_cold_start.py
-│   └── synthetic_inputs/           # Ready-to-run scenario CSV files
+│   ├── Sample_Inputs/    # Ready-to-run scenario CSV files
+|          ── aggressive_rider_inputs.csv
+|          ── urban_commute_inputs.csv
 │
 ├── Models/                         # Pre-trained neural nets, tree models & scalers (~25 MB)
 │   ├── controller_model.joblib
 │   ├── motor_model.keras
 │   ├── dynamics_lstm_model.keras
 │   ├── range_lstm_model.keras
-│   └── *_scaler.joblib
+│   └── etc..
 │
 ├── EV_DT/                          # Clean Unity 3D Project Source (No Library cache)
 │   ├── Assets/                     # C# scripts, 3D FBX models, Materials & Shaders
@@ -173,9 +176,7 @@ The virtual representation is built in Unity 3D integrated with **Cesium for Uni
 │   └── ProjectSettings/            # Engine configuration
 │
 ├── Plots/                          # Training curves, parity scatter plots & residual checks
-├── Results/                        # Multi-scenario dynamic simulation result benchmarks
-└── Paper/                          # Formal IEEE Conference Paper LaTeX source code & draft
-    └── IEEE_Conference_Paper.tex
+
 ```
 
 ---
