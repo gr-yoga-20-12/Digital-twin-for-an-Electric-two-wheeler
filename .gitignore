@@ -1,0 +1,111 @@
+# =========================================================================
+# Python & Bytecode
+# =========================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# =========================================================================
+# Temporary Runtime & Scratch Files
+# =========================================================================
+shared_state.json
+correction.py
+correction_motor.py
+correction_vehicle_dynamics.py
+rpm_test.py
+stability_test.py
+per_output_r2.py
+valid_MP.py
+output_bounds_analysis.py
+
+# =========================================================================
+# Duplicate & Redundant Workspace Folders
+# =========================================================================
+All_Files/
+.DT_Project/
+CesiumForUnitySamples-v1.23.2/
+CesiumForUnitySamples-v1.23.2.zip
+DT_Demo_Video.mp4
+
+# =========================================================================
+# Large Compressed Archives
+# =========================================================================
+*.zip
+*.tar.gz
+*.7z
+
+# =========================================================================
+# Large Raw & Processed Datasets (Exceeds GitHub 100MB file limit)
+# (Generated automatically via preprocessing scripts)
+# =========================================================================
+Datasets/
+measures_v2.csv
+TripA*.csv
+TripB*.csv
+eVED/
+eved-dataset/
+
+
+# =========================================================================
+# Unity 3D Engine Cache & Intermediate Build Files
+# =========================================================================
+/[Ee][Vv]_[Dd][Tt]/[Ll]ibrary/
+/[Ee][Vv]_[Dd][Tt]/[Tt]emp/
+/[Ee][Vv]_[Dd][Tt]/[Oo]bj/
+/[Ee][Vv]_[Dd][Tt]/[Bb]uild/
+/[Ee][Vv]_[Dd][Tt]/[Bb]uilds/
+/[Ee][Vv]_[Dd][Tt]/[Ll]ogs/
+/[Ee][Vv]_[Dd][Tt]/[Mm]emoryCaptures/
+/[Ee][Vv]_[Dd][Tt]/[Aa]ssets/Plugins/Editor/JetBrains*
+
+/[Ee]scooter_[Dd]igital[Tt]win/[Ll]ibrary/
+/[Ee]scooter_[Dd]igital[Tt]win/[Tt]emp/
+/[Ee]scooter_[Dd]igital[Tt]win/[Oo]bj/
+/[Ee]scooter_[Dd]igital[Tt]win/[Bb]uild/
+/[Ee]scooter_[Dd]igital[Tt]win/[Bb]uilds/
+/[Ee]scooter_[Dd]igital[Tt]win/[Ll]ogs/
+/[Ee]scooter_[Dd]igital[Tt]win/[Mm]emoryCaptures/
+
+# Visual Studio & MonoDevelop auto-generated files
+**/*.csproj
+**/*.unityproj
+**/*.sln
+**/*.suo
+**/*.user
+**/*.userprefs
+**/*.pidb
+**/*.booproj
+**/*.svd
+**/*.pdb
+**/*.opendb
+**/*.VC.db
+sysinfo.txt
+*.stackdump
