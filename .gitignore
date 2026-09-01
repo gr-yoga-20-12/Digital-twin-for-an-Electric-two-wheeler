@@ -77,14 +77,15 @@ eved-dataset/
 # =========================================================================
 # Unity 3D Engine Cache & Intermediate Build Files
 # =========================================================================
-/[Ee][Vv]_[Dd][Tt]/[Ll]ibrary/
-/[Ee][Vv]_[Dd][Tt]/[Tt]emp/
-/[Ee][Vv]_[Dd][Tt]/[Oo]bj/
-/[Ee][Vv]_[Dd][Tt]/[Bb]uild/
-/[Ee][Vv]_[Dd][Tt]/[Bb]uilds/
-/[Ee][Vv]_[Dd][Tt]/[Ll]ogs/
-/[Ee][Vv]_[Dd][Tt]/[Mm]emoryCaptures/
-/[Ee][Vv]_[Dd][Tt]/[Aa]ssets/Plugins/Editor/JetBrains*
+/[Ee][Vv]_[Dd][Tt]*/[Ll]ibrary/
+/[Ee][Vv]_[Dd][Tt]*/[Tt]emp/
+/[Ee][Vv]_[Dd][Tt]*/[Oo]bj/
+/[Ee][Vv]_[Dd][Tt]*/[Bb]uild/
+/[Ee][Vv]_[Dd][Tt]*/[Bb]uilds/
+/[Ee][Vv]_[Dd][Tt]*/[Ll]ogs/
+/[Ee][Vv]_[Dd][Tt]*/[Mm]emoryCaptures/
+/[Ee][Vv]_[Dd][Tt]*/[Uu]ser[Ss]ettings/
+/[Ee][Vv]_[Dd][Tt]*/[Aa]ssets/Plugins/Editor/JetBrains*
 
 /[Ee]scooter_[Dd]igital[Tt]win/[Ll]ibrary/
 /[Ee]scooter_[Dd]igital[Tt]win/[Tt]emp/
@@ -93,11 +94,13 @@ eved-dataset/
 /[Ee]scooter_[Dd]igital[Tt]win/[Bb]uilds/
 /[Ee]scooter_[Dd]igital[Tt]win/[Ll]ogs/
 /[Ee]scooter_[Dd]igital[Tt]win/[Mm]emoryCaptures/
+/[Ee]scooter_[Dd]igital[Tt]win/[Uu]ser[Ss]ettings/
 
 # Visual Studio & MonoDevelop auto-generated files
 **/*.csproj
 **/*.unityproj
 **/*.sln
+**/*.slnx
 **/*.suo
 **/*.user
 **/*.userprefs
