@@ -185,21 +185,21 @@ The virtual representation is built in Unity 3D integrated with **Cesium for Uni
 ### Individual Subsystem Test Performance
 Evaluated on independent, held-out test splits:
 
-| Subsystem | Target Variable | Unit | RMSE | MAE | $\mathbf{R^2}$ Score | Status |
+| Subsystem | Target Variable | Unit | RMSE | MAE | $\mathbf{R^2}$ Score |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Motor Controller** | Direct Voltage ($u_d$) | V | 2.6586 | 1.6896 | **0.9981** | ✅ PASS |
-| | Quadrature Voltage ($u_q$) | V | 3.5902 | 2.2578 | **0.9940** | ✅ PASS |
-| **Motor Performance** | Direct Current ($i_d$) | A | 3.8206 | 2.4428 | **0.9960** | ✅ PASS |
-| | Quadrature Current ($i_q$) | A | 4.6980 | 3.1733 | **0.9969** | ✅ PASS |
-| | Shaft Torque ($T_{em}$) | $\text{N}\cdot\text{m}$ | 3.7350 | 2.3660 | **0.9972** | ✅ PASS |
-| | Motor Speed ($N_{rpm}$) | RPM | 115.0488 | 97.5391 | **0.9963** | ✅ PASS |
-| | Rotor Temp ($T_{pm}$) | $^\circ\text{C}$ | 1.0190 | 0.7966 | **0.9932** | ✅ PASS |
-| | Stator Winding ($T_{stator}$) | $^\circ\text{C}$ | 1.7177 | 1.3158 | **0.9935** | ✅ PASS |
-| **Vehicle Dynamics** | Speed ($v$) | km/h | 0.8800 | 0.7118 | **0.9994** | ✅ PASS |
-| | Acceleration ($a$) | $\text{m/s}^2$ | 0.0926 | 0.0620 | **0.9774** | ✅ PASS |
-| | Motor Torque ($T_{dyn}$) | $\text{N}\cdot\text{m}$ | 1.6799 | 1.0995 | **0.9976** | ✅ PASS |
-| **Range Management** | State-of-Charge ($\text{SoC}$) | % | 0.3249 | 0.2130 | **0.9993** | ✅ PASS |
-| | Remaining Distance ($d_{rem}$) | km | 0.3556 | 0.1829 | **0.9989** | ✅ PASS |
+| **Motor Controller** | Direct Voltage ($u_d$) | V | 2.6586 | 1.6896 | **0.9981** |
+| | Quadrature Voltage ($u_q$) | V | 3.5902 | 2.2578 | **0.9940** |
+| **Motor Performance** | Direct Current ($i_d$) | A | 3.8206 | 2.4428 | **0.9960** |
+| | Quadrature Current ($i_q$) | A | 4.6980 | 3.1733 | **0.9969** |
+| | Shaft Torque ($T_{em}$) | $\text{N}\cdot\text{m}$ | 3.7350 | 2.3660 | **0.9972** |
+| | Motor Speed ($N_{rpm}$) | RPM | 115.0488 | 97.5391 | **0.9963** |
+| | Rotor Temp ($T_{pm}$) | $^\circ\text{C}$ | 1.0190 | 0.7966 | **0.9932** |
+| | Stator Winding ($T_{stator}$) | $^\circ\text{C}$ | 1.7177 | 1.3158 | **0.9935** |
+| **Vehicle Dynamics** | Speed ($v$) | km/h | 0.8800 | 0.7118 | **0.9994** |
+| | Acceleration ($a$) | $\text{m/s}^2$ | 0.0926 | 0.0620 | **0.9774** |
+| | Motor Torque ($T_{dyn}$) | $\text{N}\cdot\text{m}$ | 1.6799 | 1.0995 | **0.9976** |
+| **Range Management** | State-of-Charge ($\text{SoC}$) | % | 0.3249 | 0.2130 | **0.9993** |
+| | Remaining Distance ($d_{rem}$) | km | 0.3556 | 0.1829 | **0.9989** |
 
 ### Closed-Loop Multi-Model Feedback Validation (500 Timesteps)
 Running all 4 models continuously in feedback loop without ground-truth reset:
@@ -222,8 +222,8 @@ Running all 4 models continuously in feedback loop without ground-truth reset:
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/escooter-behavioral-digital-twin.git
-   cd escooter-behavioral-digital-twin
+   git clone https://github.com/gr-yoga-20-12/Digital-twin-for-an-Electric-two-wheeler.git
+   cd Digital-twin-for-an-Electric-two-wheeler
    ```
 
 2. **Create and activate a virtual environment:**
@@ -250,7 +250,7 @@ The system runs via a producer-consumer model where `sensor_broker.py` drives th
 
 1. **Terminal 1 — Start the Sensor Broker:**
    ```bash
-   python sensor_broker.py Ride_data_generation/synthetic_inputs/urban_commute_inputs.csv 90
+   python sensor_broker.py urban_commute_inputs.csv 90
    ```
    * *Arguments:* `<scenario_csv_path> [initial_soc_percent]` (Default SoC: 80%).
 
@@ -258,7 +258,7 @@ The system runs via a producer-consumer model where `sensor_broker.py` drives th
    ```bash
    streamlit run dashboard/app.py
    ```
-   * Open your browser at `http://localhost:8501` to view live gauges, battery drain curves, and motor thermal alerts.
+   * Open your browser at <!-- http://localhost:8501 --> `Your_Local_Host`  to view live gauges, battery drain curves, and motor thermal alerts.
 
 ---
 
@@ -277,14 +277,15 @@ You can generate custom driving test cycles with realistic Gaussian noise and AR
 
 ```bash
 # Generate specific stress scenario
-python Ride_data_generation/generate_aggressive_rider.py
-python Ride_data_generation/generate_hill_climb.py
-python Ride_data_generation/generate_winter_cold_start.py
+python generate_aggressive_rider.py
+python generate_hill_climb.py
+python generate_winter_cold_start.py
 ```
 Output CSVs contain columns: `step, time_s, throttle, slope, regen, ambient_temp, trip_type`.
 
 ---
 
+<!--
 ## 📄 Academic Conference Paper
 
 A complete, formal conference paper written in IEEE two-column format is included in the [`Paper/`](Paper/) directory:
@@ -294,6 +295,9 @@ A complete, formal conference paper written in IEEE two-column format is include
 
 ---
 
+
 ## 📜 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+-->
