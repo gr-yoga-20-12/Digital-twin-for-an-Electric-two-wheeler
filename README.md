@@ -186,7 +186,7 @@ The virtual representation is built in Unity 3D integrated with **Cesium for Uni
 Evaluated on independent, held-out test splits:
 
 | Subsystem | Target Variable | Unit | RMSE | MAE | $\mathbf{R^2}$ Score |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| :--- | :--- | :---: | :---: | :---: | :---: |
 | **Motor Controller** | Direct Voltage ($u_d$) | V | 2.6586 | 1.6896 | **0.9981** |
 | | Quadrature Voltage ($u_q$) | V | 3.5902 | 2.2578 | **0.9940** |
 | **Motor Performance** | Direct Current ($i_d$) | A | 3.8206 | 2.4428 | **0.9960** |
